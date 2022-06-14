@@ -1,8 +1,11 @@
 import * as Styled from "./styles";
+import { useTheme } from "styled-components";
 import { EditIcon } from "../../assets/icons";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Accordion from "./Accordion";
 
 const Leftbar = () => {
+  const theme = useTheme();
+  const { name } = theme;
   return (
     <Styled.Container>
       <Styled.MenuBox>
@@ -75,93 +78,34 @@ const Leftbar = () => {
             <EditIcon />
           </Styled.MenuEditIcon>
         </Styled.MenuHeader>
+        <Styled.AccordionWrapper>
+          <Accordion
+            count={8}
+            title={"Lorem Ipsum"}
+            detailText={"Lorem Ipsum"}
+            BoxBgColor={name === "light-theme" ? "#FEFDF5" : "#1C1B13"}
+            BoxColor={name === "light-theme" ? "#FBC710" : "#EBBB0E"}
+          />
+          <Accordion
+            count={10}
+            title={"Lorem Ipsum"}
+            detailText={"Lorem Ipsum"}
+            BoxBgColor={name === "light-theme" ? "#FEFAF5" : "#1D1812"}
+            BoxColor={name === "light-theme" ? "#EC1515" : "#EC1515"}
+          />
+          <Accordion
+            count={2}
+            title={"Lorem Ipsum"}
+            detailText={"Lorem Ipsum"}
+            BoxBgColor={name === "light-theme" ? "#F4FBF7" : "#131915"}
+            BoxColor={name === "light-theme" ? "#1EAF61" : "#1EAF61"}
+          />
+        </Styled.AccordionWrapper>
         <div
           style={{
             marginTop: "10px",
-            paddingBottom: "10px",
-            borderBottom: "1px solid black",
           }}
         >
-          <Styled.AccordionStyled>
-            <Styled.AccordionSummaryStyled
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-            >
-              <Styled.TypographyStyled>
-                <div style={{ display: "flex" }}>
-                  <div
-                    style={{
-                      width: "30px",
-                      height: "30px",
-                      backgroundColor: "#FEFDF5",
-                      textAlign: "center",
-                    }}
-                  >
-                    <p style={{ color: "#FBC710" }}>8</p>
-                  </div>
-                  <div style={{ marginLeft: "10px" }}>Lorem Ipsum</div>
-                </div>
-              </Styled.TypographyStyled>
-            </Styled.AccordionSummaryStyled>
-            <Styled.AccordionDetailsStyled>
-              <Styled.TypographyStyled>Lorem ipsum</Styled.TypographyStyled>
-            </Styled.AccordionDetailsStyled>
-          </Styled.AccordionStyled>
-          <Styled.AccordionStyled>
-            <Styled.AccordionSummaryStyled
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-            >
-              <Styled.TypographyStyled>
-                <div style={{ display: "flex" }}>
-                  <div
-                    style={{
-                      width: "30px",
-                      height: "30px",
-                      backgroundColor: "#FEFAF5",
-                      textAlign: "center",
-                    }}
-                  >
-                    <p style={{ color: "#EC1515" }}>8</p>
-                  </div>
-                  <div style={{ marginLeft: "10px" }}>Lorem Ipsum</div>
-                </div>
-              </Styled.TypographyStyled>
-            </Styled.AccordionSummaryStyled>
-            <Styled.AccordionDetailsStyled>
-              Lorem Ipsum
-            </Styled.AccordionDetailsStyled>
-          </Styled.AccordionStyled>
-          <Styled.AccordionStyled>
-            <Styled.AccordionSummaryStyled
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-            >
-              <Styled.TypographyStyled>
-                <div style={{ display: "flex" }}>
-                  <div
-                    style={{
-                      width: "30px",
-                      height: "30px",
-                      backgroundColor: "#F4FBF7",
-                      textAlign: "center",
-                    }}
-                  >
-                    <p style={{ color: "#1EAF61" }}>8</p>
-                  </div>
-                  <div style={{ marginLeft: "10px" }}>Lorem Ipsum</div>
-                </div>
-              </Styled.TypographyStyled>
-            </Styled.AccordionSummaryStyled>
-            <Styled.AccordionDetailsStyled>
-              Lorem Ipsum
-            </Styled.AccordionDetailsStyled>
-          </Styled.AccordionStyled>
-        </div>
-        <div style={{ marginTop: "5px" }}>
           <Styled.MenuBtn>Hello</Styled.MenuBtn>
         </div>
       </Styled.MenuDetails>

@@ -2,6 +2,7 @@ import Styled from "styled-components";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Typography from "@mui/material/Typography";
 
 export const Container = Styled.div`
@@ -24,7 +25,7 @@ export const MenuDetails = Styled.div`
     height: auto;
     border: 1px solid black;
     padding: 10px;
-    background-color: ${({ theme }) => theme.colors.BoxBgColor};
+    background-color: ${({ theme }) => theme.colors.AccordionBgColor};
     overflow: hidden;
 `;
 
@@ -75,7 +76,7 @@ export const MenuEditIcon = Styled.div`
 
 export const Iconbar = Styled.div`
     width: 85%;
-    border: 1px solid #A3A3A3;
+    border: 1px solid #FF0100;
     border-radius: 3px;
     display: flex;
     flex-direction: row;
@@ -110,24 +111,36 @@ export const IconGroup = Styled.div`
 export const MenuBtn = Styled.button`
     width: 100%;
     height: 50px;
-    border: 1px solid black;
+    border: 1px solid ${({ theme }) => theme.colors.NavBtn1Color};
     padding: 5px;
     padding-left: 10px;
-    font-size: 14px;
-    background-color: ${({ theme }) => theme.colors.NavBtn2BgColor};
-    color: ${({ theme }) => theme.colors.NavBtn2Color};
-    border: 0px;
+    font-size: 16px;
+    background-color: ${({ theme }) => theme.colors.AccordionBgColor};
+    color: ${({ theme }) => theme.colors.NavBtn1Color};
     border-radius: 2px;
     cursor: pointer;
     text-align: left;
+    font-weight: 500;
+`;
+
+/******* Accordion Styles **********/
+
+export const AccodionOpenIcon = Styled(ExpandMoreIcon)`
+    color: ${({ color }) => color};
 `;
 
 export const AccordionStyled = Styled(Accordion)`
     &.css-1elwnq4-MuiPaper-root-MuiAccordion-root {
         box-shadow: none !important;
+        background-color: ${({ theme }) => theme.colors.AccordionBgColor};
+        color: ${({ theme }) => theme.colors.MenuTitleColor};
     }
     &.css-1elwnq4-MuiPaper-root-MuiAccordion-root.Mui-expanded {
         margin: 0px !important;
+    }
+    & div.css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root{
+        background-color: ${({ theme }) =>
+          theme.colors.AccordionBgColor}; !important;
     }
 `;
 
@@ -138,3 +151,26 @@ export const AccordionDetailsStyled = Styled(AccordionDetails)`
     }
 `;
 export const TypographyStyled = Styled(Typography)``;
+
+export const AccordionWrapper = Styled.div`
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+`;
+
+export const AccordionRowWrapper = Styled.div`
+    display: flex;
+`;
+
+export const AccordionCountLabel = Styled.div`
+     width: 30px;
+     height: 30px;
+     background-color: ${({ bgColor }) => bgColor};
+     color: ${({ color }) => color};
+     text-align: center;
+`;
+
+export const AccordionTitle = Styled.div`
+    margin-left: 10px;
+    color:  ${({ color }) => color};
+`;

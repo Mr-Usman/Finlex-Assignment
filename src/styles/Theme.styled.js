@@ -19,7 +19,8 @@ export const light = {
     ItemPriceColor: "#150705",
     ItemPriceDescriptionColor: "#A3A3A3",
     MenuTitleColor: "#A3A3A3",
-    MenuIconColor: "#FDB6A8"
+    MenuIconColor: "#FDB6A8",
+    AccordionBgColor: "#FFFFFF",
   },
 };
 
@@ -45,6 +46,7 @@ export const dark = {
     ItemPriceDescriptionColor: "#E7E7E7",
     MenuTitleColor: "#FFFFFF",
     MenuIconColor: "#6A7676",
+    AccordionBgColor: "#121111",
   },
 };
 
