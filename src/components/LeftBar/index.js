@@ -90,17 +90,74 @@ const Leftbar = () => {
             >
               <Styled.TypographyStyled>
                 <div style={{ display: "flex" }}>
-                  <div>111</div>
-                  <div>222</div>
+                  <div
+                    style={{
+                      width: "30px",
+                      height: "30px",
+                      backgroundColor: "#FEFDF5",
+                      textAlign: "center",
+                    }}
+                  >
+                    <p style={{ color: "#FBC710" }}>8</p>
+                  </div>
+                  <div style={{ marginLeft: "10px" }}>Lorem Ipsum</div>
                 </div>
               </Styled.TypographyStyled>
             </Styled.AccordionSummaryStyled>
             <Styled.AccordionDetailsStyled>
+              <Styled.TypographyStyled>Lorem ipsum</Styled.TypographyStyled>
+            </Styled.AccordionDetailsStyled>
+          </Styled.AccordionStyled>
+          <Styled.AccordionStyled>
+            <Styled.AccordionSummaryStyled
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
               <Styled.TypographyStyled>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                eget.
+                <div style={{ display: "flex" }}>
+                  <div
+                    style={{
+                      width: "30px",
+                      height: "30px",
+                      backgroundColor: "#FEFAF5",
+                      textAlign: "center",
+                    }}
+                  >
+                    <p style={{ color: "#EC1515" }}>8</p>
+                  </div>
+                  <div style={{ marginLeft: "10px" }}>Lorem Ipsum</div>
+                </div>
               </Styled.TypographyStyled>
+            </Styled.AccordionSummaryStyled>
+            <Styled.AccordionDetailsStyled>
+              Lorem Ipsum
+            </Styled.AccordionDetailsStyled>
+          </Styled.AccordionStyled>
+          <Styled.AccordionStyled>
+            <Styled.AccordionSummaryStyled
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Styled.TypographyStyled>
+                <div style={{ display: "flex" }}>
+                  <div
+                    style={{
+                      width: "30px",
+                      height: "30px",
+                      backgroundColor: "#F4FBF7",
+                      textAlign: "center",
+                    }}
+                  >
+                    <p style={{ color: "#1EAF61" }}>8</p>
+                  </div>
+                  <div style={{ marginLeft: "10px" }}>Lorem Ipsum</div>
+                </div>
+              </Styled.TypographyStyled>
+            </Styled.AccordionSummaryStyled>
+            <Styled.AccordionDetailsStyled>
+              Lorem Ipsum
             </Styled.AccordionDetailsStyled>
           </Styled.AccordionStyled>
         </div>

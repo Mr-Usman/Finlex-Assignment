@@ -8,7 +8,6 @@ export const Container = Styled.div`
     display: flex;
     width: 100%;
     flex-direction: column;
-    justify-content: space-between;
     height: 100%;
 `;
 
@@ -123,7 +122,16 @@ export const MenuBtn = Styled.button`
     text-align: left;
 `;
 
-export const AccordionStyled = Styled(Accordion)``;
+export const AccordionStyled = Styled(Accordion)`
+    &.css-1elwnq4-MuiPaper-root-MuiAccordion-root {
+        box-shadow: none !important;
+    }
+`;
+
 export const AccordionSummaryStyled = Styled(AccordionSummary)``;
-export const AccordionDetailsStyled = Styled(AccordionDetails)``;
+export const AccordionDetailsStyled = Styled(AccordionDetails)`
+    &.css-15v22id-MuiAccordionDetails-root {
+        padding: 8px 56px 16px !important;
+    }
+`;
 export const TypographyStyled = Styled(Typography)``;
