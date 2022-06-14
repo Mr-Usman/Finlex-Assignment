@@ -6,6 +6,7 @@ import { GlobalStyles } from "./styles/Global";
 import { light, dark } from "./styles/Theme.styled";
 import Leftbar from "./components/LeftBar";
 import * as Styled from "./styles";
+import Header from "./components/Header";
 
 function App() {
   const [themeType, setThemeType] = useState("LIGHT");
@@ -31,35 +32,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-      <Styled.Container>
-        <Styled.NavText>Lorem Ipsum dolor it amet</Styled.NavText>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            width: "20%",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <div>
-            <Styled.CheckBoxWrapper>
-              <Styled.CheckBox
-                id="checkbox"
-                type="checkbox"
-                onChange={handleThemeChange}
-              />
-              <Styled.CheckBoxLabel htmlFor="checkbox" />
-            </Styled.CheckBoxWrapper>
-          </div>
-          <div>
-            <Styled.NavBtn1>Hello ge</Styled.NavBtn1>
-          </div>
-          <div>
-            <Styled.NavBtn2>Hello ge222</Styled.NavBtn2>
-          </div>
-        </div>
-      </Styled.Container>
+      <Header handleThemeChange={handleThemeChange} />
       <Styled.BodyWrapper>
         <Styled.LeftBar>
           <Leftbar />
