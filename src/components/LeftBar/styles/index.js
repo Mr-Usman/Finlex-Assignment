@@ -126,6 +126,9 @@ export const AccordionStyled = Styled(Accordion)`
     &.css-1elwnq4-MuiPaper-root-MuiAccordion-root {
         box-shadow: none !important;
     }
+    &.css-1elwnq4-MuiPaper-root-MuiAccordion-root.Mui-expanded {
+        margin: 0px !important;
+    }
 `;
 
 export const AccordionSummaryStyled = Styled(AccordionSummary)``;

@@ -34,11 +34,9 @@ function App() {
       <GlobalStyles />
       <Header handleThemeChange={handleThemeChange} />
       <Styled.BodyWrapper>
-        <Styled.LeftBar>
-          <Leftbar />
-        </Styled.LeftBar>
+        <Leftbar />
         <Styled.ListSection>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <Styled.ListPriceWrapper>
             <TotalPriceCard
               price={"0.0000.00,00"}
               title={"lorem ipsum dolor sit"}
@@ -47,7 +45,7 @@ function App() {
               price={"0.0000.00,00"}
               title={"lorem ipsum dolor sit"}
             />
-          </div>
+          </Styled.ListPriceWrapper>
           <div
             style={{
               display: "flex",

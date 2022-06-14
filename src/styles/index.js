@@ -16,10 +16,6 @@ const BodyWrapper = Styled.div`
     }
 `;
 
-const LeftBar = Styled.div`
-    display: flex;
-`;
-
 const ListSection = Styled.div`
     display: flex;
     flex-direction: column;
@@ -36,4 +32,9 @@ const ListSectionWrapper = Styled.div`
     justify-content: space-between;
 `;
 
-export { BodyWrapper, LeftBar, ListSection, ListSectionWrapper };
+const ListPriceWrapper = Styled.div`
+    display: flex;
+    justify-content: space-between;
+`;
+
+export { BodyWrapper, ListSection, ListSectionWrapper, ListPriceWrapper };
