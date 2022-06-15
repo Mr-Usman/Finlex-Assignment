@@ -7,8 +7,10 @@ import { light, dark } from "./styles/Theme.styled";
 import Leftbar from "./components/LeftBar";
 import * as Styled from "./styles";
 import Header from "./components/Header";
+import ServerResponseData from "./server";
 
 function App() {
+  const [productListData, setProductListData] = useState([]);
   const [themeType, setThemeType] = useState("LIGHT");
   const [theme, setTheme] = useState(light);
 
@@ -20,6 +22,10 @@ function App() {
       return "LIGHT";
     });
   };
+
+  useEffect(() => {
+    setProductListData(ServerResponseData);
+  }, []);
 
   useEffect(() => {
     if (themeType === "LIGHT") {
@@ -46,28 +52,19 @@ function App() {
               title={"lorem ipsum dolor sit"}
             />
           </Styled.ListPriceWrapper>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignContent: "center",
-              marginBottom: "auto",
-            }}
-          >
-            <Styled.ListSectionWrapper>
-              <ListSection />
-              <ListSection />
-              <ListSection />
-              <ListSection />
-              <ListSection />
-            </Styled.ListSectionWrapper>
-            <Styled.ListSectionWrapper>
-              <ListSection />
-              <ListSection />
-              <ListSection />
-              <ListSection />
-              <ListSection />
-            </Styled.ListSectionWrapper>
+          <div>
+            <Styled.Row>
+              {productListData.length > 0 &&
+                productListData?.map(({ title, description }, index) => {
+                  return (
+                    <Styled.Col key={index}>
+                      <Styled.Card>
+                        <ListSection title={title} description={description} />
+                      </Styled.Card>
+                    </Styled.Col>
+                  );
+                })}
+            </Styled.Row>
           </div>
         </Styled.ListSection>
       </Styled.BodyWrapper>

@@ -37,4 +37,32 @@ const ListPriceWrapper = Styled.div`
     justify-content: space-between;
 `;
 
-export { BodyWrapper, ListSection, ListSectionWrapper, ListPriceWrapper };
+const Col = Styled.div`
+  float: left;
+  width: 20%;
+  padding: 0 10px;
+`;
+
+const Row = Styled.div`
+  margin: 0 -10px;
+  &: after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+`;
+
+const Card = Styled.div`
+  padding: 10px 0px;
+  text-align: center;
+`;
+
+export {
+  BodyWrapper,
+  ListSection,
+  ListSectionWrapper,
+  ListPriceWrapper,
+  Col,
+  Row,
+  Card,
+};

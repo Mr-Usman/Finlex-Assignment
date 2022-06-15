@@ -1,12 +1,12 @@
 import Styled from "styled-components";
 
 const ListCard = Styled.div`
-    width: 19%;
     border: 1px solid #ccc;
     height: auto;
     background-color: ${({ theme }) => theme.colors.BoxBgColor};
     color: ${({ theme }) => theme.colors.text};
     overflow: hidden;
+    text-align: left;
 `;
 
 const ListItemButton = Styled.button`
