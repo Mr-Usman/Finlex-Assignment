@@ -111,6 +111,10 @@ export const IconGroup = Styled.div`
     margin-top: 4px;
 `;
 
+export const MenuBtnWrapper = Styled.div`
+    margin-top: 10px;
+`;
+
 export const MenuBtn = Styled.button`
     width: 100%;
     height: 50px;

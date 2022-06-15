@@ -1,8 +1,9 @@
 import * as Styled from "./styles";
 import { useTheme } from "styled-components";
-import { EditIcon } from "../../assets/icons";
 import Accordion from "./Accordion";
 import MenuSection from "./MenuSection";
+import MenuHeader from "./MenuHeader";
+import { EditIcon } from "../../assets/icons";
 
 const Leftbar = () => {
   const theme = useTheme();
@@ -10,13 +11,7 @@ const Leftbar = () => {
   return (
     <Styled.Container>
       <Styled.MenuBox>
-        <Styled.MenuHeader>
-          <Styled.MenuTitle size={"20px"}>Lorem Ipsum</Styled.MenuTitle>
-          <Styled.MenuEditIcon>
-            <EditIcon />
-          </Styled.MenuEditIcon>
-        </Styled.MenuHeader>
-
+        <MenuHeader />
         <Styled.EditInfoSection>
           <Styled.SubSection1>
             <Styled.MenuTitle size={"14px"}>Lorem Ipsum1</Styled.MenuTitle>
@@ -27,7 +22,6 @@ const Leftbar = () => {
               <Styled.MenuTitle size={"13px"}>Lorem Ipsum2</Styled.MenuTitle>
             </Styled.Iconbar>
           </Styled.SubSection1>
-
           <MenuSection isBorderRight={false} />
         </Styled.EditInfoSection>
 
@@ -37,12 +31,7 @@ const Leftbar = () => {
         </Styled.EditInfoSection>
       </Styled.MenuBox>
       <Styled.MenuDetails>
-        <Styled.MenuHeader>
-          <Styled.MenuTitle size={"20px"}>Lorem Ipsum</Styled.MenuTitle>
-          <Styled.MenuEditIcon>
-            <EditIcon />
-          </Styled.MenuEditIcon>
-        </Styled.MenuHeader>
+        <MenuHeader />
         <Styled.AccordionWrapper>
           <Accordion
             count={8}
@@ -66,13 +55,10 @@ const Leftbar = () => {
             BoxColor={name === "light-theme" ? "#1EAF61" : "#1EAF61"}
           />
         </Styled.AccordionWrapper>
-        <div
-          style={{
-            marginTop: "10px",
-          }}
-        >
+
+        <Styled.MenuBtnWrapper>
           <Styled.MenuBtn>Lorem Ipsum</Styled.MenuBtn>
-        </div>
+        </Styled.MenuBtnWrapper>
       </Styled.MenuDetails>
     </Styled.Container>
   );
