@@ -2,6 +2,7 @@ import * as Styled from "./styles";
 import { useTheme } from "styled-components";
 import { EditIcon } from "../../assets/icons";
 import Accordion from "./Accordion";
+import MenuSection from "./MenuSection";
 
 const Leftbar = () => {
   const theme = useTheme();
@@ -15,61 +16,25 @@ const Leftbar = () => {
             <EditIcon />
           </Styled.MenuEditIcon>
         </Styled.MenuHeader>
-        <Styled.Section1>
+
+        <Styled.EditInfoSection>
           <Styled.SubSection1>
-            <Styled.MenuTitle size={"14px"}>Lorem Ipsum</Styled.MenuTitle>
+            <Styled.MenuTitle size={"14px"}>Lorem Ipsum1</Styled.MenuTitle>
             <Styled.Iconbar>
               <Styled.IconDivision>
                 <EditIcon />
               </Styled.IconDivision>
-              <Styled.MenuTitle size={"13px"}>Lorem Ipsum</Styled.MenuTitle>
+              <Styled.MenuTitle size={"13px"}>Lorem Ipsum2</Styled.MenuTitle>
             </Styled.Iconbar>
           </Styled.SubSection1>
 
-          <Styled.SubSection2>
-            <Styled.MenuTitle size={"14px"}>Lorem Ipsum22</Styled.MenuTitle>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignContent: "center",
-              }}
-            >
-              <Styled.IconGroup>
-                <div>
-                  <EditIcon />
-                </div>
-                <div>
-                  <Styled.MenuTitle size={"14px"}>Lorem Ipsum</Styled.MenuTitle>
-                </div>
-              </Styled.IconGroup>
-            </div>
-          </Styled.SubSection2>
-        </Styled.Section1>
-        <Styled.Section1>
-          <Styled.SubSection1>
-            <Styled.MenuTitle size={"14px"}>Lorem Ipsum</Styled.MenuTitle>
-            <Styled.IconGroup>
-              <div>
-                <EditIcon />
-              </div>
-              <div>
-                <Styled.MenuTitle size={"14px"}>Lorem Ipsum</Styled.MenuTitle>
-              </div>
-            </Styled.IconGroup>
-          </Styled.SubSection1>
-          <Styled.SubSection2>
-            <Styled.MenuTitle size={"14px"}>Lorem Ipsum</Styled.MenuTitle>
-            <Styled.IconGroup>
-              <div>
-                <EditIcon />
-              </div>
-              <div>
-                <Styled.MenuTitle size={"14px"}>Lorem Ipsum</Styled.MenuTitle>
-              </div>
-            </Styled.IconGroup>
-          </Styled.SubSection2>
-        </Styled.Section1>
+          <MenuSection isBorderRight={false} />
+        </Styled.EditInfoSection>
+
+        <Styled.EditInfoSection>
+          <MenuSection isBorderRight={true} />
+          <MenuSection isBorderRight={false} />
+        </Styled.EditInfoSection>
       </Styled.MenuBox>
       <Styled.MenuDetails>
         <Styled.MenuHeader>
@@ -106,7 +71,7 @@ const Leftbar = () => {
             marginTop: "10px",
           }}
         >
-          <Styled.MenuBtn>Hello</Styled.MenuBtn>
+          <Styled.MenuBtn>Lorem Ipsum</Styled.MenuBtn>
         </div>
       </Styled.MenuDetails>
     </Styled.Container>

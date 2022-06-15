@@ -40,7 +40,7 @@ export const MenuHeader = Styled.div`
     padding-bottom: 5px;
 `;
 
-export const Section1 = Styled.div`
+export const EditInfoSection = Styled.div`
     width: 100%;
     display: flex;
     height: 50px;
@@ -56,9 +56,12 @@ export const SubSection1 = Styled.div`
     border-right: 1px solid #A3A3A3;
 `;
 
-export const SubSection2 = Styled.div`
+export const SectionWithBorder = Styled.div`
     width: 50%;
     padding-left: 10px;
+    border-right: ${(props) =>
+      props.isBorderRight ? "1px solid #A3A3A3" : "none"};
+
 `;
 
 export const MenuTitle = Styled.p`
