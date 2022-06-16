@@ -8,18 +8,19 @@ import Leftbar from "./components/LeftBar";
 import Header from "./components/Header";
 import ServerResponseData from "./server";
 import List from "./components/List";
+import { THEME_TYPE } from "./constants";
 
 function App() {
   const [productListData, setProductListData] = useState([]);
-  const [themeType, setThemeType] = useState("LIGHT");
+  const [themeType, setThemeType] = useState(THEME_TYPE.LIGHT);
   const [theme, setTheme] = useState(light);
 
   const handleThemeChange = () => {
     setThemeType(() => {
-      if (themeType === "LIGHT") {
-        return "DARK";
+      if (themeType === THEME_TYPE.LIGHT) {
+        return THEME_TYPE.DARK;
       }
-      return "LIGHT";
+      return THEME_TYPE.LIGHT;
     });
   };
 
@@ -28,7 +29,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (themeType === "LIGHT") {
+    if (themeType === THEME_TYPE.LIGHT) {
       setTheme(light);
     } else {
       setTheme(dark);
