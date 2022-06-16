@@ -3,7 +3,7 @@ import { useTheme } from "styled-components";
 import Accordion from "./Accordion";
 import MenuSection from "./MenuSection";
 import MenuHeader from "./MenuHeader";
-import { EditIcon } from "../../assets/icons";
+import { EditIcon, FlagIcon } from "../../assets/icons";
 
 const Leftbar = () => {
   const theme = useTheme();
@@ -22,12 +22,12 @@ const Leftbar = () => {
               <Styled.MenuTitle size={"13px"}>Lorem Ipsum2</Styled.MenuTitle>
             </Styled.Iconbar>
           </Styled.SubSection1>
-          <MenuSection isBorderRight={false} />
+          <MenuSection isBorderRight={false} Icon={EditIcon} />
         </Styled.EditInfoSection>
 
         <Styled.EditInfoSection>
-          <MenuSection isBorderRight={true} />
-          <MenuSection isBorderRight={false} />
+          <MenuSection isBorderRight={true} Icon={EditIcon} />
+          <MenuSection isBorderRight={false} Icon={FlagIcon} />
         </Styled.EditInfoSection>
       </Styled.MenuBox>
       <Styled.MenuDetails>

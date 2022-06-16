@@ -1,14 +1,13 @@
 import * as Styled from "./styles";
-import { EditIcon } from "../../assets/icons";
 
-const EditPrice = ({ label }) => {
+const EditPrice = ({ label, Icon }) => {
   return (
     <div>
       <Styled.IconGroup>
+        <Styled.EditPriceIcon>
+          <Icon />
+        </Styled.EditPriceIcon>
         <Styled.DivWrapper>
-          <EditIcon />
-        </Styled.DivWrapper>
-        <Styled.DivWrapper> 
           <Styled.MenuTitle size={"14px"}>{label}</Styled.MenuTitle>
         </Styled.DivWrapper>
       </Styled.IconGroup>

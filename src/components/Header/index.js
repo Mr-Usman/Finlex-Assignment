@@ -16,10 +16,10 @@ const Header = ({ handleThemeChange }) => {
           </Styled.CheckBoxWrapper>
         </Styled.DivWrapper>
         <Styled.DivWrapper>
-          <Styled.NavBtn1>Hello ge</Styled.NavBtn1>
+          <Styled.NavBtn1>Lorem Ipsum</Styled.NavBtn1>
         </Styled.DivWrapper>
         <Styled.DivWrapper>
-          <Styled.NavBtn2>Hello ge222</Styled.NavBtn2>
+          <Styled.NavBtn2>Lorem Ipsum</Styled.NavBtn2>
         </Styled.DivWrapper>
       </Styled.HeaderWrapper>
     </Styled.Container>

@@ -102,6 +102,11 @@ export const IconDivision = Styled.div`
     }
 `;
 
+export const EditPriceIcon = Styled.div`
+    margin-right: 5px;
+    margin-top: 2px;
+`;
+
 export const IconGroup = Styled.div`
     display: flex;
     flex-direction: row;
@@ -109,6 +114,11 @@ export const IconGroup = Styled.div`
     margin-bottom: 6px;
     margin-left: -2px;
     margin-top: 4px;
+    svg {
+        width: 20px;
+        height: 20px;
+        fill: ${({ theme }) => theme.colors.MenuIconColor};
+    }
 `;
 
 export const MenuBtnWrapper = Styled.div`

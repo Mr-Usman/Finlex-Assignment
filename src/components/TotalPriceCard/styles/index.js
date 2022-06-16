@@ -13,8 +13,9 @@ const PriceCard = Styled.div`
 `;
 
 const PriceLabel = Styled.div`
+    margin: 2px 12px;
     font-weight: 600;
-    color: ${({ theme }) => theme.colors.ItemPriceColor}
+    color: ${({ theme }) => theme.colors.ItemPriceColor};
 `;
 
 const PriceDescription = Styled.div`
@@ -22,4 +23,12 @@ const PriceDescription = Styled.div`
     color: ${({ theme }) => theme.colors.ItemPriceDescriptionColor};
 `;
 
-export { PriceCard, PriceLabel, PriceDescription };
+const CurrencyEditIcon = Styled.div`
+    svg {
+        width: 20px;
+        height: 20px;
+        fill: ${({ theme }) => theme.colors.MenuIconColor};
+    }
+`;
+
+export { PriceCard, PriceLabel, PriceDescription, CurrencyEditIcon };
