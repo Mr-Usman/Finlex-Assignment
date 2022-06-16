@@ -83,3 +83,13 @@ export const NavBtn2 = Styled.button`
     border-radius: 2px;
     cursor: pointer;
 `;
+
+export const HeaderWrapper = Styled.div`
+  display: flex;
+  flex-direction : 'row';
+  width: 20%;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const DivWrapper = Styled.div``;

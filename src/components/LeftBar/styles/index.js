@@ -181,3 +181,5 @@ export const AccordionTitle = Styled.div`
     margin-left: 10px;
     color:  ${({ color }) => color};
 `;
+
+export const DivWrapper = Styled.div``;

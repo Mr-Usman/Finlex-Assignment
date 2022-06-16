@@ -4,16 +4,8 @@ const Header = ({ handleThemeChange }) => {
   return (
     <Styled.Container>
       <Styled.NavText>Lorem Ipsum dolor it amet</Styled.NavText>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          width: "20%",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        <div>
+      <Styled.HeaderWrapper>
+        <Styled.DivWrapper>
           <Styled.CheckBoxWrapper>
             <Styled.CheckBox
               id="checkbox"
@@ -22,14 +14,14 @@ const Header = ({ handleThemeChange }) => {
             />
             <Styled.CheckBoxLabel htmlFor="checkbox" />
           </Styled.CheckBoxWrapper>
-        </div>
-        <div>
+        </Styled.DivWrapper>
+        <Styled.DivWrapper>
           <Styled.NavBtn1>Hello ge</Styled.NavBtn1>
-        </div>
-        <div>
+        </Styled.DivWrapper>
+        <Styled.DivWrapper>
           <Styled.NavBtn2>Hello ge222</Styled.NavBtn2>
-        </div>
-      </div>
+        </Styled.DivWrapper>
+      </Styled.HeaderWrapper>
     </Styled.Container>
   );
 };

@@ -5,12 +5,12 @@ const EditPrice = ({ label }) => {
   return (
     <div>
       <Styled.IconGroup>
-        <div>
+        <Styled.DivWrapper>
           <EditIcon />
-        </div>
-        <div>
+        </Styled.DivWrapper>
+        <Styled.DivWrapper> 
           <Styled.MenuTitle size={"14px"}>{label}</Styled.MenuTitle>
-        </div>
+        </Styled.DivWrapper>
       </Styled.IconGroup>
     </div>
   );
