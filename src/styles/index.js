@@ -16,7 +16,7 @@ const BodyWrapper = Styled.div`
     }
 `;
 
-const ListSection = Styled.div`
+const ListBody = Styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between; 
@@ -57,12 +57,15 @@ const Card = Styled.div`
   text-align: center;
 `;
 
+const DivWrapper = Styled.div``;
+
 export {
   BodyWrapper,
-  ListSection,
+  ListBody,
   ListSectionWrapper,
   ListPriceWrapper,
   Col,
   Row,
   Card,
+  DivWrapper,
 };

@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
+import * as Styled from "./styles";
 import { ThemeProvider } from "styled-components";
-import ListSection from "./components/ListSection";
 import TotalPriceCard from "./components/TotalPriceCard";
 import { GlobalStyles } from "./styles/Global";
 import { light, dark } from "./styles/Theme.styled";
 import Leftbar from "./components/LeftBar";
-import * as Styled from "./styles";
 import Header from "./components/Header";
 import ServerResponseData from "./server";
+import List from "./components/List";
 
 function App() {
   const [productListData, setProductListData] = useState([]);
@@ -41,7 +41,7 @@ function App() {
       <Header handleThemeChange={handleThemeChange} />
       <Styled.BodyWrapper>
         <Leftbar />
-        <Styled.ListSection>
+        <Styled.ListBody>
           <Styled.ListPriceWrapper>
             <TotalPriceCard
               price={"0.0000.00,00"}
@@ -52,21 +52,12 @@ function App() {
               title={"lorem ipsum dolor sit"}
             />
           </Styled.ListPriceWrapper>
-          <div>
+          <Styled.DivWrapper>
             <Styled.Row>
-              {productListData.length > 0 &&
-                productListData?.map(({ title, description }, index) => {
-                  return (
-                    <Styled.Col key={index}>
-                      <Styled.Card>
-                        <ListSection title={title} description={description} />
-                      </Styled.Card>
-                    </Styled.Col>
-                  );
-                })}
+              <List productListData={productListData} />
             </Styled.Row>
-          </div>
-        </Styled.ListSection>
+          </Styled.DivWrapper>
+        </Styled.ListBody>
       </Styled.BodyWrapper>
     </ThemeProvider>
   );
