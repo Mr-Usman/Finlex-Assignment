@@ -70,6 +70,7 @@ export const MenuTitle = Styled.p`
 `;
 
 export const MenuEditIcon = Styled.div`
+    cursor: pointer;
     svg {
         width: 20px;
         height: 20px;
